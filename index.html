@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Scroll</title>
+    <link rel="stylesheet" href="/src/assets/scss/main.scss">
+</head>
+
+<body>
+
+    <header>
+        <div class="scene" id="scene">
+            <div class="layer" data-depth="0.1" style="background-image: url('/src/assets/img/layer-4.jpg');"></div>
+            <div class="layer" data-depth="0.2" style="background-image: url('/src/assets/img/layer-3.png');">
+                <div class="layer__content">
+                    <h1>Deep Scroll <br>GSAP / SCSS</h1>
+                </div>
+            </div>
+            <div class="layer" data-depth="0.3" style="background-image: url('/src/assets/img/layer-2.png');">
+                <div class="layer__middle">
+                    <h2>Journey <br>continues...</h2>
+                </div>
+            </div>
+            <div class="layer" data-depth="0.4" style="background-image: url('/src/assets/img/layer-1.png');">
+                <div class="layer__preend">
+                    <h2>Still <br>going on</h2>
+                </div>
+            </div>
+            <div class="layer" data-depth="0.5">
+                <div class="bg-overlay"></div>
+                <div class="layer__end">
+                    <h3>End of scroll</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script type="module" src="/src/assets/js/main.js"></script>
+</body>
+
+</html>

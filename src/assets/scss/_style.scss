@@ -1,0 +1,89 @@
+html {
+    font-family: var(--font-family);
+    scrollbar-width: none;
+}
+
+html {
+    font-family: var(--font-family);
+    scrollbar-width: none;
+}
+
+body {
+    color: #fff;
+    overflow-x: hidden;
+    background-color: #010B19;
+}
+
+.scene {
+    height: 1900vh;
+    position: relative;
+}
+
+// Слои
+.layer {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+
+    // Контент слоя (заголовок)
+    &__content {
+        padding: 4vh 4.75vw;
+        backdrop-filter: blur(25px) brightness(.98);
+
+        h1 {
+            text-transform: uppercase;
+            font-size: calc(var(--index) * 4.5);
+            text-align: center;
+            line-height: .9em;
+            letter-spacing: -.15vw;
+        }
+    }
+
+    // Промежуточный слой с текстом
+    &__middle, &__preend {
+        position: relative;
+        opacity: 0;
+        padding: 3vh 3.5vw;
+        backdrop-filter: blur(15px) brightness(.95);
+        // width: min-content;
+        letter-spacing: -.15vw;
+        will-change: opacity, transform;
+
+        h2 {
+            font-size: calc(var(--index) * 2.3);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+        }
+    }
+    &__preend {
+        h2 {
+            font-size: calc(var(--index) * 1.7);
+        };
+    }
+
+    // Конечный слой с текстом
+    &__end {
+        position: relative;
+        opacity: 0;
+        will-change: opacity, transform;
+
+        h3 {
+            font-size: calc(var(--index) * 1.2);
+            position: relative;
+        }
+    }
+}
+
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #010B19;
+    opacity: 0;
+    z-index: -1;
+}
